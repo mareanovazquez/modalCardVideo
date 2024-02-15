@@ -1,1 +1,1 @@
-El fragmento de código agregado para generar el modal está hecho a través de innerHmtl.
+Ya no se utiliza más innerHmtl para agregar código.
