@@ -1,0 +1,1 @@
+El fragmento de código agregado para generar el modal está hecho a través de innerHmtl.
