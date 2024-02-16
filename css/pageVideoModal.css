@@ -1,4 +1,4 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,72 +9,78 @@ body {
     font-size: 16px;
 }
 
-.contenedor {
-    width: 90%;
-    max-width: 1080px;
-    margin: 0 auto;
+.proyectos {
+    border-bottom: 1px solid #ccc;
+    background: #F3F4FA;
+    padding: 30px;
 }
 
-.titulo-seccion {
+.proyectos h2 {
     text-align: center;
-    margin-bottom: 40px;
-}
-
-.titulo-seccion h2 {
     color: #0089E0;
-    font-size: 3.125rem;
+    font-size: 50px;
     margin-bottom: 15px;
     font-weight: 500;
 }
 
-.titulo-seccion p {
+.proyectos .contenedor {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.proyectos .contenedor .titulo-seccion {
+    width: 45%;
+    text-align: center;
+}
+
+.proyectos .contenedor .titulo-seccion p {
     color: #979797;
-    font-size: 1rem;
+    font-size: 18px;
     font-weight: 400;
 }
 
-/*Proyectos*/
-
-.proyectos {
-    background: #F3F4FA;
-    padding: 108px 0 54px 0;
-}
-
-.proyectos .galeria-proyectos {
+.proyectos .contenedor .galeria-proyectos {
+    width: 45%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-bottom: 34px;
-    border-bottom: 1px solid #ccc;
 }
 
 .proyectos .galeria-proyectos .proyecto {
-    width: 32%;
     margin-bottom: 2%;
     cursor: pointer;
 }
 
 .proyectos .galeria-proyectos .proyecto img {
     width: 100%;
-    vertical-align: top;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
-.card {
+
+/*Proyectos video modal*/
+
+
+.contenedor-modal .modal {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 9999999999;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-}
+    align-items: center;
+} 
 
-.tituloProyecto {
-    color: ghostwhite;
-}
 
-.info p {
-    color: ghostwhite;
-}
+
+
 
 /*Modal fotos proyectos*/
 .modal {
@@ -90,11 +96,12 @@ body {
     align-items: center;
 }
 
-.modal img {
+.modal .videoModal {
     width: 80%;
-    max-width: 700px;
+    max-width: 800px;
+    max-height: 600px;
     transition: 2s;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .modal .btn-cerrar {

@@ -12,6 +12,7 @@ function desplegarModal() {
     modal.classList.add('modal');
     
     let video = document.createElement('video');
+    video.classList.add('videoModal');
     video.src = rutaVideo;
     video.controls = true; // Agregar controles de reproducción
     video.autoplay = true; // Opcional: Iniciar la reproducción automáticamente
