@@ -29,7 +29,12 @@ function desplegarModal() {
     
     let descripcion = document.createElement('p');
     descripcion.textContent = descripcionProyecto;
-    descripcion.classList.add = ('descripcionProyecto')
+    descripcion.classList.add('descripcionProyecto');
+
+    let callToAction = document.createElement('button');
+    callToAction.textContent = 'Call to Action';
+    callToAction.classList.add('callToAction'); // Agregar una clase para estilizar el botón
+    callToAction.classList.add('button-6');
     
     let btnCerrarModal = document.createElement('div');
     btnCerrarModal.classList.add('btn-cerrar');
@@ -45,6 +50,7 @@ function desplegarModal() {
     
     info.appendChild(titulo);
     info.appendChild(descripcion);
+    info.appendChild(callToAction);
     card.appendChild(img);
     card.appendChild(info);
     modal.appendChild(card);

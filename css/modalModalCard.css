@@ -9,19 +9,10 @@ body {
     font-size: 16px;
 }
 
-.proyectos .contenedor {
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.titulo-seccion {
-    width: 45%;
-    text-align: center;
-    margin-bottom: 40px;
+.proyectos {
+    border-bottom: 1px solid #ccc;
+    background: #F3F4FA;
+    padding: 30px;
 }
 
 .proyectos h2 {
@@ -32,58 +23,48 @@ body {
     font-weight: 500;
 }
 
-.titulo-seccion p {
+.proyectos .contenedor {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.proyectos .contenedor .titulo-seccion {
+    width: 45%;
+    text-align: center;
+}
+
+.proyectos .contenedor .titulo-seccion p {
     color: #979797;
-    font-size: 1rem;
+    font-size: 18px;
     font-weight: 400;
 }
 
-/*Proyectos*/
-
-.proyectos {
-    background: #F3F4FA;
-    padding: 108px 0 54px 0;
-}
-
-.proyectos .galeria-proyectos {
+.proyectos .contenedor .galeria-proyectos {
     width: 45%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-bottom: 34px;
-    border-bottom: 1px solid #ccc;
 }
 
 .proyectos .galeria-proyectos .proyecto {
-    width: 32%;
     margin-bottom: 2%;
     cursor: pointer;
 }
 
 .proyectos .galeria-proyectos .proyecto img {
     width: 100%;
-    vertical-align: top;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
-.card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
 
-.tituloProyecto {
-    color: ghostwhite;
-}
-
-.info p {
-    color: ghostwhite;
-}
 
 /*Modal fotos proyectos*/
-.modal {
+.contenedor-modal .modal {
     position: fixed;
     width: 100%;
     height: 100vh;
@@ -96,14 +77,90 @@ body {
     align-items: center;
 }
 
-.modal img {
-    width: 80%;
-    max-width: 700px;
-    transition: 2s;
+.contenedor-modal .modal .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #F3F4FA;
+    max-width: 800px;
     border-radius: 10px;
+    padding-bottom: 30px;
 }
 
-.modal .btn-cerrar {
+.contenedor-modal .modal .card img {
+    width: 100%;
+    transition: 2s;
+    border-radius: 5px;
+}
+
+.contenedor-modal .modal .info {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor-modal .modal .card .info .tituloProyecto {
+    width: 90%;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    font-size: 30px;
+}
+
+.contenedor-modal .modal .card .info .descripcionProyecto {
+    width: 90%;
+    padding-left: 15px;
+    font-size: 16px;
+}
+
+.contenedor-modal .modal .card .info .button-6 {
+    align-self: flex-end;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: #0089E0;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 14px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0;
+    min-height: 3rem;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    left: -10px;
+    text-decoration: none;
+    transition: all 250ms;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
+    background-color:white;
+    }
+
+.button-6:hover,
+.button-6:focus {
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.button-6:hover {
+    transform: translatex(-5px);
+}
+
+.button-6:active {
+    background-color: #F0F0F1;
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+    color: rgba(0, 0, 0, 0.65);
+    transform: translateX(0);
+}
+
+
+.contenedor-modal .modal .btn-cerrar {
     position: fixed;
     width: 50px;
     height: 50px;
@@ -116,14 +173,14 @@ body {
 }
 
 
-.modal .btn-cerrar i {
+.contenedor-modal .modal .btn-cerrar i {
     color: #fff;
     font-size: 1.5rem;
     line-height: 50px;
 
 }
 
-.modal .btn-cerrar i:hover {
-    transform: rotate(90deg);
-    transition: all 0.3s linear;
+.contenedor-modal .modal .btn-cerrar i:hover {
+    color: #979797;
+    transition: all 0.2s linear;
 }
