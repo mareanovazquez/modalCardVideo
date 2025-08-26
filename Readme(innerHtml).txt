@@ -1,1 +1,0 @@
-Ya no se utiliza más innerHmtl para agregar código.
